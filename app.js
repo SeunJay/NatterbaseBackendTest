@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser"); 
 const checkDataRoute = require("./routes/data")
+const removeItemRoute = require("./routes/input")
 
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(bodyParser.json());
 const port = process.env.PORT || 6000;
 
 app.use("/api", checkDataRoute)
+app.use("/api", removeItemRoute);
 
 app.get("/", (req, res) => {
   res.status(200).send("Welcome to the Natter Base API.");
