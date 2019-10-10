@@ -4,6 +4,7 @@
   "description": "Backend Nodejs developer test",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "jest"
   },
   "author": "Seun Jay",
