@@ -17,11 +17,10 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to the Natter Base API.");
 });
 
-if (process.env.NODE_ENV !== 'test'){
-
+if (process.env.NODE_ENV !== "test") {
   app.listen(port, () => {
     console.log(`Server up and running on port ${port}`);
   });
 }
 
-module.exports = app
+module.exports = app;
